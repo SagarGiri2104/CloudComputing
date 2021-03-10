@@ -1,8 +1,0 @@
-var config = {
-    host: 'database-3.ccqmamrug85r.us-east-2.rds.amazonaws.com',
-    user: 'admin',
-    password: 'qwertyjkl',
-    database: 'awsdb',
-    port: 1433,
-    ssl: true
-};
