@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+    <script src="../javascripts/controller2.js"></script>
+
+</head>
+
+<body ng-app="routesApp">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Quiz2</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#/home">Home</a>
+                </li>
+                <li>
+                    <a href="#/pblm">Pblm</a>
+                </li>
+                <li>
+                    <a href="#/getBig5">Largest 5 Quakes</a>
+                </li>
+                <li>
+                    <a href="#/getEqInRange">Find EarthQuake in Range</a>
+                </li>
+                <li>
+                    <a href="#/getCountBn2EqLocInRange">Find EarthQuakes Count bn 2 Locs</a>
+                </li>
+                <li>
+                    <a href="#/getEqBnDates">Find EarthQuake b/n Dates</a>
+                </li>
+                <li>
+                    <a href="#/getLargestEqInRange">Find Largest EarthQuake In Range </a>
+                </li>
+                <li>
+                    <a href="#/getRecentEqCountBnMag">Find Recent EarthQuake Count bn Magnitude </a>
+                </li>
+                <li>
+                    <a href="#/getEqCountInRange">Find Total Earthquakes in Range</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</body>
+
+<div ng-view></div>
+
+</html>

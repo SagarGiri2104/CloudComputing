@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="routesApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type='text/css' href="../stylesheets/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- load angular -->
+    <script src="../javascripts/controller2.js"></script>
+
+</head>
+
+<body ng-controller="pblm3Controller">
+
+    <h4>EarthQuakes b/n Dates</h4>
+    <h4>Please wait...it will take time to load the data</h4>
+    <div class="container">
+        <table>
+            <tr>
+                <td><label for=" quakes ">Find EarthQuakes between Dates</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for=" quakes ">From Date</label>
+                </td>
+                <td><input type="date" name="etDateFrom" id="etDateFrom" placeholder="from Date" ng-model="etDateFrom"></input>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for=" quakes ">To Date</label>
+                </td>
+                <td><input type="date" name="etDateTo" id="etDateTo" placeholder="to Date" ng-model="etDateTo"></input>
+                </td>
+            </tr>
+            <tr>
+                <td><label for=" quakes ">Search Mag less than ___</label>
+                </td>
+                <td><input type="text" name="etMag" id="etMag" placeholder="Provide Mag" ng-model="etMag"></input>
+                </td>
+            </tr>
+            <td>
+                <button type="button" id="eqBnDates" ng-click="findEqBnDates()">Get EarthQuakes in Range</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="outputGrid " ng-show="showGrid ">
+        <table>
+            <tr>
+                <td>Latitude</td>
+                <td>Longitude</td>
+                <td>Magnitude</td>
+            </tr>
+
+            <tr ng-repeat="x in EqBnDates">
+                <td>{{x.LATITUDE}}</td>
+                <td>{{x.LONGITUDE}}</td>
+                <td>{{x.MAG}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

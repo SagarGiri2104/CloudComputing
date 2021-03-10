@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="routesApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type='text/css' href="../stylesheets/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- load angular -->
+    <script src="../javascripts/controller2.js"></script>
+
+</head>
+
+<body ng-controller="pblmController">
+
+    <h4>EarthQuakes Count in Range</h4>
+
+    <div class="container">
+        <table>
+            <tr>
+                <td><label for=" quakes ">Find EarthQuakes in Range</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="text" name="etLatitude" id="etLatitude" placeholder="Provide latitude" ng-model="etLatitude"></input>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="text" name="etLongitude" id="etLongitude" placeholder="Provide Longitude" ng-model="etLongitude"></input>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" name="etRange" id="etRange" placeholder="Provide Range" ng-model="etRange"></input>
+                </td>
+            </tr>
+            <td><button type="button" id="eqInRange" ng-click="findEqCountInRange()">Get EarthQuakes in Range</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="outputGrid " ng-show="showGrid ">
+        <table>
+            <td><label for=" quakes ">Total Count of EarthQuakes in Range</label>
+                <td><label for=" quakes ">{{EqInRangeResult}}</label>
+        </table>
+    </div>
+</body>
+
+</html>

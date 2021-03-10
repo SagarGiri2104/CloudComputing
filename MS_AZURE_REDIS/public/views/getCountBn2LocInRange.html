@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="routesApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type='text/css' href="../stylesheets/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- load angular -->
+    <script src="../javascripts/controller2.js"></script>
+
+</head>
+
+<body ng-controller="pblmController">
+
+    <h4>EarthQuakes count b/n two locations</h4>
+    <h4>Please wait...it will take time to load the data</h4>
+
+    <div class="container">
+        <table>
+            <tr>
+                <td><label for=" quakes ">Provide Location 1</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="text" name="etLatitude1" id="etLatitude1" placeholder="Provide latitude of location1" ng-model="etLatitude1"></input>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="text" name="etLongitude1" id="etLongitude1" placeholder="Provide Longitude of location 1" ng-model="etLongitude1"></input>
+                </td>
+            </tr>
+            <td><label for=" quakes ">Provide Location 2</label>
+            </td>
+            </tr>
+            <tr>
+                <td><input type="text" name="etLatitude2" id="etLatitude2" placeholder="Provide latitude of loc 2" ng-model="etLatitude2"></input>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="text" name="etLongitude2" id="etLongitude2" placeholder="Provide Longitude of loc 2" ng-model="etLongitude2"></input>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" name="etRange" id="etRange" placeholder="Provide Range" ng-model="etRange"></input>
+                </td>
+            </tr>
+            <td><button type="button" id="eqCountInRange" ng-click="findCountEqLocInRange(etLatitude1,etLongitude1,etLatitude2,etLongitude2,etRange)">Get EarthQuakes Count btn 2 locs Range</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="outputGrid " ng-show="showGrid ">
+        <table>
+            <tr>
+                <td>count1</td>
+                <td>count2</td>
+            </tr>
+
+            <tr ng-repeat="x in ipEqCountBnLoc">
+                <td>{{x.COUNT1}}</td>
+                <td>{{x.COUNT2}}</td>
+
+                <!-- <td>
+                    <div ng-init="myVar = '../images/' + x.Picture">
+                        <img ng-src="{{myVar}}">
+                    </div> 
+                </td>-->
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

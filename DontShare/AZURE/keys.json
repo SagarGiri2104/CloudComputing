@@ -1,0 +1,5 @@
+{
+    "redisHost": "redis-10965.c53.west-us.azure.cloud.redislabs.com",
+    "redisPort": 10965,
+    "redisKey": "Ocean@2012"
+  }

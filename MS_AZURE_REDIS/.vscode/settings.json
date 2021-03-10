@@ -1,0 +1,15 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.deploySubpath": ".",
+    "sqltools.connections": [
+        {
+            "driver": "MSSQL",
+            "name": "Server=tcp:earthquakes01.database.windows.net,1433;Initial Catalog=Assignment2;Persist Security Info=False;User ID=sagar6582;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+            "previewLimit": 50
+        }
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/d12e1f86-7efa-43a6-838e-05fed1d4ab18/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/assgn3-6582"
+}

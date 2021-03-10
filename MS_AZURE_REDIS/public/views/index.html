@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html ng-app="quakesApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type='text/css' href="../stylesheets/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- load angular -->
+    <script src="../javascripts/quakeController.js"></script>
+
+</head>
+
+<body ng-controller="quakeController">
+
+    <table>
+        <tr>
+            <h2>Giri, Sagar</h2>
+        </tr>
+        <tr>
+            <h3>1001746582</h3>
+        </tr>
+        <tr>
+            <h3>Quiz 3</h3>
+        </tr>
+
+        <img src="../images/s.jpg" style="width:100px;height:100px;">
+    </table>
+    <div class="container">
+        <table>
+            <tr>
+                <td><label for="quakes1">Input range</label></td>
+                <td><label for="quakes2">From</label></td>
+                <td><input type="text" name="ip1" id="ip1" placeholder="input 1" ng-model="input1"></input></td>
+                <td><label for="quakes2">To</label></td>
+                <td><input type="text" name="ip2" id="ip2" placeholder="input 2" ng-model="input2"></input></td>
+                <td><label for="quakes3">Number of times</label></td>
+                <td><input type="text" name="ip2" id="ip2" placeholder="input 3" ng-model="input3"></input></td>
+                <tr>
+                <td><button type="button" id="getBigQuakes" ng-click="Submit()">Get Result</button></td>
+                <td><button type="button" id="getBigQuakes1" ng-click="Submit1()">Get Result with multiple queries</button></td>
+                <td><button type="button" id="getBigQuakes2" ng-click="Submit2()">Get Result from cache</button></td>
+
+            </tr>
+<tr>
+    <td><button type="button" id="getBigQuakes3" ng-click="Submit2()">CLick for in-memory caching</button></td>
+    <td><button type="button" id="getBigQuakes4" ng-click="Submit1()">Click for in-memory DB</button></td>
+</tr>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h3>"Total time for all queries: {{totalTime}} secs"</h3>
+    </div>
+    <div class="outputGrid1" ng-show=showGrid1>
+        <table>
+            <tr>
+                <td>Location</td>
+                <td>Date</td>
+                <td>Magnitude</td>
+            </tr>
+
+            <tr ng-repeat="x in outputData1">
+                <td>{{x.place.value}},{{x.locationSource.value}}</td>
+                <td>{{x.time.value}}</td>
+                <td>{{x.mag.value}}</td>
+                <!-- <td>
+                    <div ng-init="myVar = '../images/' + x.Picture">
+                        <img ng-src="{{myVar}}">
+                    </div> 
+                </td>-->
+            </tr>
+        </table>
+    </div>
+    <div class="outputGrid2" ng-show=showGrid2>
+        <!-- <h3>"Total time for all queries: {{totalTime}} secs"</h3> -->
+        <table>
+            <tr>
+                <td>Random Values</td>
+                <td>Time Taken</td>
+                <td>Number of tuples</td>
+                <td ng-show=db>Db Used</td>
+            </tr>
+
+            <tr ng-repeat="x in outputData2">
+                <td>{{x.random}}</td>
+                <td>{{x.timeTaken}}</td>
+                <td>{{x.length}}</td>
+                <td>{{x.dbUsed}}</td>
+                <!-- <td>
+                    <div ng-init="myVar = '../images/' + x.Picture">
+                        <img ng-src="{{myVar}}">
+                    </div> 
+                </td>-->
+            </tr>
+        </table>
+    </div>
+<div class="outputGrid3" ng-show=showGrid3>
+<ul ng-repeat="y in outputData3">
+    <li>
+        <tr>
+        <td>Random values : {{y.random}}</td>
+        <td>Time taken : {{y.timeTaken}}ms</td>
+        </tr>
+    </li>
+        <table>
+            <tr>
+                <td>Location</td>
+                <td>Date</td>
+                <td>Magnitude</td>
+            </tr>
+        
+      <tr ng-repeat="x in y.data">
+        <td>{{x.place.value}},{{x.locationSource.value}}</td>
+        <td>{{x.time.value}}</td>
+        <td>{{x.mag.value}}</td>
+      </tr>
+    </table>
+    </ul>
+    </div>
+</body>
+
+</html>

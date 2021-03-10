@@ -1,0 +1,13 @@
+const connStr = "DATABASE=BLUDB;HOSTNAME=dashdb-txn-sbox-yp-dal09-04.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=pmz02895;PWD=6800d+k884x10mlk";
+db2Connection.js
+
+
+var mysqlConnection = mysql.createConnection({
+    host: "dashdb-txn-sbox-yp-dal09-04.services.dal.bluemix.net",
+    user: "pmz02895",
+    password: "6800d+k884x10mlk",
+    database: "ASSGN1",
+    multipleStatements: true,
+    port: 50000
+});
+connection.js

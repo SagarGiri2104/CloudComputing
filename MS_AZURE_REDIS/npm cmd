@@ -1,0 +1,8 @@
+npm init
+clear
+npm install --save express express-handlebars mysql body-parser 
+npm install --save-dev nodemon
+
+npm install -g express-generator
+
+express Project name

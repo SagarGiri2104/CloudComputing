@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="routesApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type='text/css' href="../stylesheets/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- load angular -->
+    <script src="../javascripts/controller2.js"></script>
+
+</head>
+
+<body ng-controller="pblmController">
+
+    <h4>Recent EarthQuakes Count b/n MAG</h4>
+
+    <div class="container">
+        <table>
+            <tr>
+                <td><label for="quakes ">Find EarthQuakes count for recent Days</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for=" quakes ">Enter Recent Days</label>
+                </td>
+                <td><input type="text" name="etRecentDays" id="etRecentDays" placeholder="Enter Recent Days" ng-model="etRecentDays"></input>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="button" id="eqInRange" ng-click="findRecentEqCountByMag()">Get EarthQuakes in Range</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="outputGrid " ng-show="showGrid ">
+        <table>
+            <tr>
+                <td>Count</td>
+                <td>Range</td>
+            </tr>
+
+            <tr ng-repeat="x in recentEqCountRange">
+                <td>{{x.COUNT}}</td>
+                <td>{{x.RANGE}}</td>
+                <!-- <td>
+                    <div ng-init="myVar = '../images/' + x.Picture">
+                        <img ng-src="{{myVar}}">
+                    </div> 
+                </td>-->
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

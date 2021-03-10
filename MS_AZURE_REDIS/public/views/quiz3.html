@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html ng-app="quiz3App">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type='text/css' href="../stylesheets/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- load angular -->
+    <script src="../javascripts/quiz3Controller.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+
+</head>
+
+<body ng-controller="quiz3Controller">
+    <table>
+        <tr>
+            <h3>1001746582</h3>
+           
+        </tr>
+        <tr>
+            <h2>Giri, Sagar</h2>
+        </tr>
+        <tr>
+            <h3>Quiz 3</h3>
+        </tr>
+
+        <!-- <img src="../images/s.jpg" style="width:100px;height:100px;"> -->
+    </table>
+    <div class="container">
+        <table>
+            <tr>
+               
+                <td><label for="quakes1">Country code</label></td>
+                <td><input type="text" name="ip1" id="ip1" placeholder="input 1" ng-model="input1"></input></td>
+                <!-- <td><input type="text" name="ip2" id="ip2" placeholder="input 2" ng-model="input2"></input></td> -->
+                <!-- <td><label for="quakes3">Number of times</label></td> -->
+                <!-- <td><input type="text" name="ip2" id="ip2" placeholder="input 3" ng-model="input3"></input></td> -->
+               
+                <td><button type="button" id="button1" ng-click="Submit(input1)">Q7</button></td>
+                <!-- <td><button type="button" id="getBigQuakes1" ng-click="Submit1()">Get Result with multiple queries</button></td>
+                <td><button type="button" id="getBigQuakes2" ng-click="Submit2()">Get Result from cache</button></td> -->
+
+            </tr>
+            <tr>
+               
+                <td><label for="quakes1">year range</label></td>
+                <td><input type="text" name="ip1" id="ip1" placeholder="input 1" ng-model="input2"></input></td>
+                <td><input type="text" name="ip2" id="ip2" placeholder="input 2" ng-model="input3"></input></td>
+                <!-- <td><label for="quakes3">Number of times</label></td> -->
+                <!-- <td><input type="text" name="ip2" id="ip2" placeholder="input 3" ng-model="input3"></input></td> -->
+               
+                <td><button type="button" id="button1" ng-click="Submit1(input2,input3)">Q8</button></td>
+                <!-- <td><button type="button" id="getBigQuakes1" ng-click="Submit1()">Get Result with multiple queries</button></td>
+                <td><button type="button" id="getBigQuakes2" ng-click="Submit2()">Get Result from cache</button></td> -->
+
+            </tr>
+            <tr>
+               
+                <td><label for="quakes1">percent range</label></td>
+                <td><input type="text" name="ip1" id="ip1" placeholder="input 1" ng-model="input4"></input></td>
+                <td><input type="text" name="ip2" id="ip2" placeholder="input 2" ng-model="input5"></input></td>
+                <!-- <td><label for="quakes3">Number of times</label></td> -->
+                <!-- <td><input type="text" name="ip2" id="ip2" placeholder="input 3" ng-model="input3"></input></td> -->
+               
+                <td><button type="button" id="button1" ng-click="Submit2(input4,input5)">Q9</button></td>
+                <!-- <td><button type="button" id="getBigQuakes1" ng-click="Submit1()">Get Result with multiple queries</button></td>
+                <td><button type="button" id="getBigQuakes2" ng-click="Submit2()">Get Result from cache</button></td> -->
+
+            </tr>
+         
+            <tr>
+               
+                <td><label for="quakes1">year range</label></td>
+                <td><input type="text" name="ip1" id="ip1" placeholder="input 1" ng-model="input6"></input></td>
+                <td><input type="text" name="ip2" id="ip2" placeholder="input 2" ng-model="input7"></input></td>
+                <td><label for="quakes3">Number of times</label></td>
+                <td><input type="text" name="ip2" id="ip2" placeholder="input 3" ng-model="input8"></input></td>
+               
+                <td><button type="button" id="button1" ng-click="Submit3(input6,input7,input8)">Q11a</button></td>
+                <!-- <td><button type="button" id="getBigQuakes1" ng-click="Submit1()">Get Result with multiple queries</button></td>
+                <td><button type="button" id="getBigQuakes2" ng-click="Submit2()">Get Result from cache</button></td> -->
+
+            </tr>
+            <tr>
+               
+                <td><label for="quakes1">percent range</label></td>
+                <td><input type="text" name="ip1" id="ip1" placeholder="input 1" ng-model="input9"></input></td>
+                <td><input type="text" name="ip2" id="ip2" placeholder="input 2" ng-model="input10"></input></td>
+                <td><label for="quakes3">Number of times</label></td>
+                <td><input type="text" name="ip2" id="ip2" placeholder="input 3" ng-model="input11"></input></td>
+               
+                <td><button type="button" id="button1" ng-click="Submit4(input9,input10,input11)">Q10b</button></td>
+                <!-- <td><button type="button" id="getBigQuakes1" ng-click="Submit1()">Get Result with multiple queries</button></td>
+                <td><button type="button" id="getBigQuakes2" ng-click="Submit2()">Get Result from cache</button></td> -->
+
+            </tr>
+            <tr>
+               
+                <td><label for="quakes1">year range</label></td>
+                <td><input type="text" name="ip1" id="ip1" placeholder="input 1" ng-model="input6"></input></td>
+                <td><input type="text" name="ip2" id="ip2" placeholder="input 2" ng-model="input7"></input></td>
+                <td><label for="quakes3">Number of times</label></td>
+                <td><input type="text" name="ip2" id="ip2" placeholder="input 3" ng-model="input8"></input></td>
+               
+                <td><button type="button" id="button1" ng-click="Submit5(input6,input7,input8)">Q11a</button></td>
+                <!-- <td><button type="button" id="getBigQuakes1" ng-click="Submit1()">Get Result with multiple queries</button></td>
+                <td><button type="button" id="getBigQuakes2" ng-click="Submit2()">Get Result from cache</button></td> -->
+
+            </tr>
+        </table>
+        <div id="charts" ng-show=showChart></div>
+            <div class="outputGrid1" ng-show=showGrid1>
+
+                <table ng-show=showGrid1> 
+                    <tr>
+                     <td>Time taken : {{timeTaken}} ms</td>
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td>Year</td>
+                        <td>Number of incidents</td>
+                    </tr>
+        
+                    <tr ng-repeat="x in outputData1">
+                        <td>{{x.Entity.value}}</td>
+                        <td>{{x.year.value}}</td>
+                        <td>{{x.NumberTerroristIncidents.value}}</td>
+                        <!-- <td>
+                            <div ng-init="myVar = '../images/' + x.Picture">
+                                <img ng-src="{{myVar}}">
+                            </div> 
+                        </td>-->
+                    </tr>
+                </table>
+            </div>
+    
+            <div class="outputGrid1" ng-show=showGrid2>
+                <table ng-show=showGrid2> 
+                    <tr>
+                     <td>Time taken : {{timeTaken}} ms</td>
+                    </tr>
+                    <tr>
+                        <!-- <td>Number of incidents</td> -->
+                        <td>Country</td>
+                        <td>Number of incidents</td>
+                    </tr>
+        
+                    <tr ng-repeat="x in outputData2">
+                        <td>{{x.Entity.value}}</td>
+                        <!-- <td>{{x.year.value}}</td> -->
+                        <td>{{x.count.value}}</td>
+                        <!-- <td>
+                            <div ng-init="myVar = '../images/' + x.Picture">
+                                <img ng-src="{{myVar}}">
+                            </div> 
+                        </td>-->
+                    </tr>
+                </table>
+            </div>
+            <div class="outputGrid3" ng-show=showGrid2>
+                <div>
+                    Total Time taken : {{totalTime}} ms
+                </div>
+                <ul ng-repeat="y in outputData2">
+                    <li>
+                        <tr>
+                        <td>Random values : {{y.random}}</td>
+                        <td>Time taken : {{y.timeTaken}}ms</td>
+                        <td>Db Used: {{y.dbUsed}}</td>
+                        </tr>
+                    </li>
+                        <table>
+                            <tr>
+                                <td>Latitude</td>
+                                <td>Longitude</td>
+                                <td>id</td>
+                            </tr>
+                        
+                      <tr ng-repeat="x in y.dataRows">
+                        <td>{{x.latitude.value}}</td>
+                        <td>{{x.longitude.value}}</td>
+                        <td>{{x.id.value}}</td>
+                      </tr>
+                    </table>
+                    </ul>
+                    </div>
+ 
+              
+          </div>
+    </body>
+</html>

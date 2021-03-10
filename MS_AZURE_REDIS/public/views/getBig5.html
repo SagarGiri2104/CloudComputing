@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="routesApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type='text/css' href="../stylesheets/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- load angular -->
+    <script src="../javascripts/controller2.js"></script>
+
+</head>
+
+<body ng-controller="pblm1Controller">
+
+    <h4>Largest EarthQuakes List yo yo</h4>
+
+    <div class="container">
+        <table>
+            <tr>
+                <td><label for=" quakes ">Display number of largest quakes</label>:</label>
+                </td>
+                <td><input type="text" name="etBigQuakes" id="etBigQuakes" placeholder="Provide number of largest Quakes" ng-model="etBigQuakes">5</input>
+                </td>
+                <td><button type="button" id="getBigQuakes" ng-click="getBigQuakes()">Get Largest Quakes</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="outputGrid " ng-show="showGrid ">
+        <table>
+            <tr>
+                <td>Latitude</td>
+                <td>Longitude</td>
+                <td>Magnitude</td>
+            </tr>
+
+            <tr ng-repeat="x in largestQuakesResult">
+                <td>{{x.latitude.value}}</td>
+                <td>{{x.longitude.value}}</td>
+                <td>{{x.mag.value}}</td>
+                <!-- <td>
+                    <div ng-init="myVar = '../images/' + x.Picture">
+                        <img ng-src="{{myVar}}">
+                    </div> 
+                </td>-->
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

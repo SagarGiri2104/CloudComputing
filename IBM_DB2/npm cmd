@@ -1,0 +1,15 @@
+npm init
+clear
+npm install --save express express-handlebars mysql body-parser 
+npm install --save-dev nodemon
+
+npm install -g express-generator
+
+express Project name
+
+nodemon server.js
+
+// if port already in use
+
+find: sudo lsof -iTCP:8080 -sTCP:LISTEN
+kill: kill -9 <<PID>>
